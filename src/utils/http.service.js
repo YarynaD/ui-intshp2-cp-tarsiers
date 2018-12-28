@@ -35,6 +35,13 @@ class HttpService {
       .catch(error => Promise.reject(error));
   }
 
+  patch(url, data, options) {
+    return axios
+      .patch(url, data, options)
+      .then(response => response.data)
+      .catch(error => Promise.reject(error));
+  }
+
   create(options) {
     return axios.create(options);
   }
