@@ -1,3 +1,4 @@
+import axios from 'axios';
 import HttpService from './http.service';
 
 const testUrl = 'https://jsonplaceholder.typicode.com/users';
@@ -53,7 +54,7 @@ const updatedObject = {
 
 describe('get', () => {
   test('should answer on GET', async () => {
-    const spy = jest.spyOn(HttpService, 'get');
+    const spy = jest.spyOn(axios, 'get');
     await HttpService.get(testUrl, testConfig);
     expect(spy).toHaveBeenCalled();
   });
