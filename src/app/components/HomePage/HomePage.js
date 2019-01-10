@@ -1,11 +1,11 @@
 import React from 'react';
-import Banner from '../Banner/Banner';
+// import Banner from '../Banner/Banner';
 import AdvertisingArea from '../AdvertisingArea/AdvertisingArea';
 
 const HomePage = () => (
   <div className="col-9">
     <AdvertisingArea />
-    <Banner />
+    {/* <Banner /> */}
   </div>
 );
 
