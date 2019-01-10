@@ -3,10 +3,10 @@ import HttpService from '../../../utils/http.service';
 import appConfig from '../../../config/appConfig';
 
 export default class AdvertisingArea extends React.Component {
-  constructor() {
-    super();
-    this.state = { htmlSnipet: '' };
-  }
+  // constructor() {
+  //   super();
+  //   this.state = { htmlSnipet: '' };
+  // }
 
   componentDidMount() {
     HttpService.get(appConfig.apiResources.baner).then(response => {
@@ -14,9 +14,21 @@ export default class AdvertisingArea extends React.Component {
     });
   }
 
-  render() {
+  createMarkup = () => {
     const { htmlSnipet } = this.state;
 
-    return htmlSnipet ? <div dangerouslySetInnerHTML={htmlSnipet} /> : null;
+    return { __html: `<p>${htmlSnipet}</p>` };
+  };
+
+  render() {
+    // console.log(response);
+    return <div dangerouslySetInnerHTML={this.state.htmlSnippet} />;
   }
 }
+
+//   render() {
+//     const { htmlSnipet } = this.state;
+
+//     return htmlSnipet ? <div>{htmlSnipet}</div> : null;
+//   }
+// }
