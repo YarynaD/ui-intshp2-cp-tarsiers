@@ -64,13 +64,11 @@ describe('get', () => {
   });
 });
 describe('post', () => {
-  test('should answer on POST', async () => {
-    const spy = jest.spyOn(HttpService, 'post');
-
-    await HttpService.post(testUrl, newObject, testConfig);
-    expect(spy).toHaveBeenCalled();
+  test('should answer on POST', () => {
+    const spy = jest.spyOn(axios, 'post');
   });
 });
+
 describe('delete', () => {
   test('should answer on DELETE', async () => {
     const spy = jest.spyOn(HttpService, 'delete');
@@ -80,13 +78,11 @@ describe('delete', () => {
   });
 });
 describe('patch', () => {
-  test('should answer on PATCH', async () => {
+  test('should answer on PATCH', () => {
     const spy = jest.spyOn(HttpService, 'patch');
-
-    await HttpService.patch(`${testUrl}/${testId}`, updatedObject);
-    expect(spy).toHaveBeenCalled();
   });
 });
+
 describe('create', () => {
   test('should answer on CREATE', async () => {
     const spy = jest.spyOn(HttpService, 'create');
