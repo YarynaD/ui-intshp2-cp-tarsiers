@@ -4,7 +4,7 @@ const controller = require('./controller');
 const router = express.Router();
 
 router.get('/api/products', controller.getProducts);
-router.get('/api/baner', controller.getBaner);
+router.get('/api/baner', controller.getBanner);
 router.get('*', controller.notFound);
 
 module.exports = router;

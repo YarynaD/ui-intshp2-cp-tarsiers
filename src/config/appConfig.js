@@ -1,4 +1,7 @@
 const appConfig = {
+  apiResources: {
+    baner: '/api/baner'
+  },
   footer: {
     links: [
       {

@@ -1,9 +1,11 @@
 import React from 'react';
-import PersonList from '../AdvertisingArea/AdvertisingArea';
+import Banner from '../Banner/Banner';
+import AdvertisingArea from '../AdvertisingArea/AdvertisingArea';
 
 const HomePage = () => (
   <div className="col-9">
-    <PersonList />
+    <AdvertisingArea />
+    <Banner />
   </div>
 );
 

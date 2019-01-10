@@ -1,5 +1,8 @@
 import axios from 'axios';
-const baseUrl = class HttpService {
+
+const baseUrl = 'http://localhost:3300';
+
+class HttpService {
   constructor() {
     window.onerror = (message, file, line) => {
       console.log(message, file, line);
@@ -46,6 +49,6 @@ const baseUrl = class HttpService {
   create(options) {
     return axios.create(options);
   }
-};
+}
 // test comment
 export default new HttpService();
