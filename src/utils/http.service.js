@@ -12,7 +12,7 @@ class HttpService {
   get(url) {
     const source = baseUrl + url;
 
-    axios
+    return axios
       .get(source)
       .then(response => response.data)
       .catch(error => Promise.reject(error));
@@ -27,23 +27,29 @@ class HttpService {
       .catch(error => Promise.reject(error));
   }
 
-  put(url, data, options) {
-    axios
-      .put(url, data, options)
-      .then(response => response.data)
-      .catch(error => Promise.reject(error));
-  }
+  put(url, data) {
+    const source = baseUrl + url;
 
-  patch(url, data, options) {
     return axios
-      .patch(url, data, options)
+      .put(source, data)
       .then(response => response.data)
       .catch(error => Promise.reject(error));
   }
 
-  delete(url, options) {
-    axios
-      .delete(url, options)
+  patch(url, data) {
+    const source = baseUrl + url;
+
+    return axios
+      .patch(source, data)
+      .then(response => response.data)
+      .catch(error => Promise.reject(error));
+  }
+
+  delete(url) {
+    const source = baseUrl + url;
+
+    return axios
+      .delete(source)
       .then(response => response.data)
       .catch(error => Promise.reject(error));
   }
@@ -52,5 +58,5 @@ class HttpService {
     return axios.create(options);
   }
 }
-// test comment
+
 export default new HttpService();

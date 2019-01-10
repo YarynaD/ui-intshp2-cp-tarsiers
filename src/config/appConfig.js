@@ -85,6 +85,10 @@ const appConfig = {
         isOrigin: false
       }
     ]
+  },
+  apiResources: {
+    promotions: '/api/promotions',
+    products: '/api/products'
   }
 };
 
