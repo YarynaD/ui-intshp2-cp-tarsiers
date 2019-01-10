@@ -1,15 +1,16 @@
 import axios from 'axios';
-
-class HttpService {
+const baseUrl = class HttpService {
   constructor() {
     window.onerror = (message, file, line) => {
       console.log(message, file, line);
     };
   }
 
-  get(url, options) {
+  get(url) {
+    const source = baseUrl + url;
+
     axios
-      .get(url, options)
+      .get(source)
       .then(response => response.data)
       .catch(error => Promise.reject(error));
   }
@@ -45,6 +46,6 @@ class HttpService {
   create(options) {
     return axios.create(options);
   }
-}
+};
 // test comment
 export default new HttpService();
