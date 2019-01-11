@@ -50,7 +50,7 @@ class JoinUs extends Component {
     const error = '* Please enter valid e-mail: sample@samle.com!';
 
     return (
-      <div className="joinus col-9">
+      <div className="joinus container">
         <div className="joinus-info col-6">
           <h2>NEWS LETTER</h2>
           <p>join us now to get all news and special offers</p>

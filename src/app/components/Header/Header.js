@@ -48,7 +48,7 @@ class Header extends React.Component {
               </Link>
             </div>
             <nav className="navbar col-10">
-              <div className={!isHidden ? 'nav-main' : 'nav-toggle'}>
+              <div className={!isHidden ? 'nav-toggle' : 'nav-main'}>
                 <ul className="header-links">{navItems}</ul>
               </div>
               <div className="header-nav-right col-3">
